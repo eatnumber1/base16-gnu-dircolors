@@ -144,3 +144,18 @@ to manually set it in `default.mustache`:
 template = os.path.join(os.path.dirname(__file__),
                         '../templates/dircolors.256dark')
 ```
+
+# Note (eatnumber1)
+
+This is how I got this repo working:
+
+Generated on 2023-01-16 from https://github.com/embayer/base16-gnu-dircolors
+using the workflow documented at
+https://github.com/chriskempson/base16-builder-php and the schemes from
+https://github.com/tinted-theming/base16-schemes for the irblack theme using the
+commands
+
+```
+  cat ../../base16-schemes/irblack.yaml | php ../../base16-builder-php/base16-builder.php --template ../templates/default.mustache > gen_dircolors.py
+  python3 ./gen_dircolors.py > ~/.dir_colors.irblack
+```
